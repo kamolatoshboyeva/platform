@@ -1,0 +1,23 @@
+.qizil{
+    background-color: red;
+   display: flex;
+    padding: 35px;
+}
+.yashil{
+    background-color: rgb(189, 236, 94);
+    padding: 100px;
+}
+.sariq{
+    padding: 100px;
+    background-color: yellow;
+   
+}
+.pic{
+    width: 100%;
+  
+    display: flex;
+     margin: auto;
+}
+.kok{
+  background-color: rgb(75, 179, 244);
+}
