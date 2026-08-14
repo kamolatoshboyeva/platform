@@ -1,37 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kursga ro'yxatdan o'tish</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<script src="script.js"></script>
 <body>
-    <div class="qizil">
-        <div class="yashil">
-            <img src="gul.jpg" alt="gul" class="pic">
-            <div class="div1"> <h2 class="h2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad corporis obcaecati cupiditate ex deserunt. Officia!</h2>
-                <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eum repellat aspernatur cupiditate possimus aut.</p></div>
-           
+
+    <main class="container">
+        <!-- YUTUQLAR VA AFZALLIKLAR BLOKI -->
+<div class="features-grid">
+    <div class="feature-card">
+        <div class="feature-icon target-icon">
+            <i class="fa-solid fa-bullseye"></i>
         </div>
-        <div class="sariq">
-         <div class="kok">
-                <div class="sana">06.12.2023</div>
-                <h3 class="h3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint modi maiores eius necessitatibus fugiat?</h3>
-         </div>
-         <div class="kok">
-            <div class="sana">06.12.2023</div>
-            <h3 class="h3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint modi maiores eius necessitatibus fugiat?</h3>
-     </div>
-     <div class="kok">
-        <div class="sana">06.12.2023</div>
-        <h3 class="h3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint modi maiores eius necessitatibus fugiat?</h3>
- </div>
- <div class="kok">
-    <div class="sana">06.12.2023</div>
-    <h3 class="h3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint modi maiores eius necessitatibus fugiat?</h3>
-</div>
+        <div class="feature-text">
+            <h4>Yuqori Natijalar</h4>
+            <p>DTM va milliy sertifikatga kafolatlangan tayyorgarlik</p>
         </div>
     </div>
+
+    <div class="feature-card">
+        <div class="feature-icon support-icon">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+        <div class="feature-text">
+            <h4>Qo'llab-quvvatlash</h4>
+            <p>Tushunarsiz savollar bo'yicha yordamchi ustozlar ko'magi</p>
+        </div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon method-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="feature-text">
+            <h4>Sinalgan Metodika</h4>
+            <p>Noldan boshlab murakkab mavzulargacha tushunarli uslub</p>
+        </div>
+    </div>
+</div>
+        <!-- Rasm va Banner qismi -->
+        <section class="banner">
+            <div class="image-wrapper">
+                <!-- Bu yerga ustoz rasmi qo'yiladi (agar bo'lmasa tayyor rasm turadi) -->
+                <img src="kamola photo.jpg" alt="Ustoz rasmi" id="hero-img">
+            </div>
+            <h2>Kamola Toshboyeva</h2>
+            <h3>Matematika tayyorlov kurslari</h3>
+           
+        </section>
+
+        <!-- Form (Ro'yxatdan o'tish) qismi -->
+        <section class="form-card">
+            <h3>Kurs haqida batafsil ma'lumot olish uchun hoziroq so'rov yuboring!</h3>
+            
+            <form id="lead-form">
+                <div class="input-group">
+                    <input type="text"name="ismi" id="name" placeholder="Ismingiz?" required>
+                   
+                </div>
+                <div class="input-group">
+                      <input type="text"name="fam" id="name" placeholder="Familyangiz?" required>
+                </div>
+
+                <div class="input-group phone-group">
+                    <span class="prefix">+998</span>
+                    <input type="tel" name="raqam" id="phone" placeholder="00 000 00 00" maxlength="9" required>
+                </div>
+
+                <div class="input-group">
+                    <select name="kurs" id="course" required>
+                        <option value="" disabled selected>Kursni tanlang</option>
+                        <option value="english">boshlang'ich</option>
+                        <option value="math">Majburiy matematika</option>
+                        <option value="sat">DTM Matematika</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="izoh" id="note" placeholder="Qo'shimcha izohingiz" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Menga qo'ng'iroq qiling</button>
+            </form>
+        </section>
+        <!-- Ijtimoiy tarmoqlar va havolalar qismi -->
+        <section class="social-section">
+            <p class="social-title">Bizni ijtimoiy tarmoqlarda kuzating:</p>
+            
+            <div class="social-links">
+                <a href="https://t.me/math_english_teacher" target="_blank" class="social-btn telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span class="icon"></span> Telegram kanal
+                </a>
+                
+                <a href="https://instagram.com/kamolaibragimovnaa" target="_blank" class="social-btn instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="icon"></span> Instagram
+                </a>
+                
+                <a href="https://youtube.com/@KamolaToshboyeva" target="_blank" class="social-btn youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="icon"></span> YouTube kanal
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

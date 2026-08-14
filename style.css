@@ -1,23 +1,320 @@
-.qizil{
-    background-color: red;
-   display: flex;
-    padding: 35px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.yashil{
-    background-color: rgb(189, 236, 94);
-    padding: 100px;
+
+/* 1. PARDA RASMINI BUTUN ORQA FONGA QO'YISH */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Parda rasmingiz va ustidan qorong'i gradient */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                      url('istockphoto-153157344-612x612.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
 }
-.sariq{
-    padding: 100px;
-    background-color: yellow;
+
+/* 2. ASOSIY KARTA (CONTAINER) */
+.container {
+    max-width: 420px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Yengil shaffof oq karta */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/* BANNER VA USTOZ RASMI */
+.banner {
+    padding: 25px 20px 15px;
+    text-align: center;
+}
+.image-wrapper {
+    width: 100%;
+    max-width: 240px;
+    height: 260px; /* Balandlikni ancha uzaytirdik */
+    margin: 0 auto 15px auto;
+    border-radius: 15px;
+    overflow: hidden;
    
 }
-.pic{
+
+.image-wrapper img {
     width: 100%;
-  
-    display: flex;
-     margin: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%; /* Rasmni biroz pastroqqa surib, yelkani ham ko'rsatadi */
 }
-.kok{
-  background-color: rgb(75, 179, 244);
+.banner h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 15px 0 8px;
+    color: #111;
+    letter-spacing: 0.5px;
+}
+
+.banner p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* FORM QISMI (Sariq fonli blok) */
+.form-card {
+    background-color: #9ee2ff; /* Sariq rangli urg'u */
+    padding: 25px 20px;
+    border-radius: 24px 24px 20px 20px;
+}
+
+.form-card h3 {
+    font-size: 16px;
+    color: #111;
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 12px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    font-family: inherit;
+}
+
+/* TELEFON INPUTI */
+.phone-group {
+    display: flex;
+    background: #ffffff;
+    border-radius: 10px;
+    align-items: center;
+    padding-left: 12px;
+    border: 1px solid #adadad;
+}
+
+.phone-group .prefix {
+    font-weight: bold;
+    color: #222;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.phone-group input {
+    border: none;
+    padding-left: 5px;
+}
+
+/* TUGMA */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #24A1DE;
+    color: #ffffff;
+    margin-top: 5px;
+    box-shadow: 0 4px 12px rgba(0, 136, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0066cc;
+}
+/* IJTIMOIY TARMOQLAR BLOKI */
+.social-section {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.social-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Ikonka va matn orasidagi masofa */
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
+}
+
+/* Ikonkalar hajmi */
+.social-btn i {
+    font-size: 20px;
+}
+
+/* Brend ranglari (Rasmda berilgan ochiq ko'k o'rniga haqiqiy brend ranglari juda chiroyli turadi) */
+.social-btn.telegram {
+    background-color: #24A1DE;
+}
+
+.social-btn.instagram {
+    background: #24A1DE;
+}
+
+.social-btn.youtube {
+    background-color: #24A1DE;
+}
+
+.social-btn .icon {
+    font-size: 16px;
+}
+/* AFZALLIKLAR STILI */
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 14px 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+/* Ikonka doirasi stili */
+.feature-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Har bir ikonkaning alohida chiroyli rangi */
+.target-icon {
+    background-color: #eef2ff;
+    color: #4f46e5;
+}
+
+.support-icon {
+    background-color: #ecfdf5;
+    color: #10b981;
+}
+
+.method-icon {
+    background-color: #fff7ed;
+    color: #f97316;
+}
+
+.feature-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.feature-text p {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.35;
+}
+/* ==========================================
+   MOBIL QURILMALAR UCHUN MOSLASHUVCHAN KOD
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Umumiy sahifa chegaralarini kichraytirish */
+    body {
+        padding: 10px;
+    }
+
+    /* Container va kontent bloklarini moslash */
+    .container, section, main {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        margin: 0 auto !important;
+    }
+
+    /* Sarlavha matnlari o'lchamini kichraytirish */
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    p {
+        font-size: 15px !important;
+    }
+
+    /* Formani va inputlarni to'liq kenglikka o'tkazish */
+    form {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    input, select, textarea, button {
+        width: 100% !important;
+        font-size: 16px !important; /* iPhone'da avto-zoom bo'lib ketmasligi uchun */
+        box-sizing: border-box;
+        margin-bottom: 12px;
+    }
+
+    /* Yonma-yon turgan bloklarni ustma-ust o'tkazish */
+    .row, .flex-container, .grid-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }
